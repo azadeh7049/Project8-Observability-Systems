@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  api1:
+    build:
+      context: .
+      dockerfile: Dockerfile-auth
+      platform: linux/amd64,linux/arm64
+
+  api2:
+    build:
+      context: .
+      dockerfile: Dockerfile-catalog
+      platform: linux/amd64,linux/arm64
