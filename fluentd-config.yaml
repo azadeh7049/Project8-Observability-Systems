@@ -1,0 +1,16 @@
+<source>
+  @type tail
+  path /Owner@DESKTOP-5TD3NIC MINGW64 ~/AWS/WeCloudData-Projects/Project8-Observability-Systems/application.log
+  tag your_application_logs
+  format json
+</source>
+<match your_application_logs>
+  @type prometheus
+  <labels>
+    severity ${record['severity']}
+   </labels>
+</match>
+scrape_configs:
+  - job_name: 'fluentd'
+    static_configs:
+      - targets: ['localhost:32000'] 
