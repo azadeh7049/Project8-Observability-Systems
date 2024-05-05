@@ -1,6 +1,6 @@
 <source>
   @type tail
-  path /Owner@DESKTOP-5TD3NIC MINGW64 ~/AWS/WeCloudData-Projects/Project8-Observability-Systems/application.log
+  path /https://grafana.com/orgs/azadehsaamani
   tag your_application_logs
   format json
 </source>
